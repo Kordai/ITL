@@ -76,13 +76,21 @@ $(document).ready(function() {
 		};
 	}, {offset: 100});
 
+	// function slowScroll (id) {
+	// 	var offset = 0;
+	// 	$('html, body').animate({
+	// 		scrollTop:$(id).offset().top-offset
+	// 	}, 500);
+	// 	return false;
+	// }
+
 	//Плавный скролл до блока .div по клику на .scroll
 	//Документация: https://github.com/flesler/jquery.scrollTo
-	$("a.scroll").click(function() {
-		$.scrollTo($(".div"), 800, {
-			offset: -90
-		});
-	});
+	// $("a.scroll").click(function() {
+	// 	$.scrollTo($("#uslugi"), 800, {
+	// 		offset: -90
+	// 	});
+	// });
 
 	//Каруселька
 	//Документация: http://owlgraphic.com/owlcarousel/
