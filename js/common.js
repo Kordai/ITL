@@ -1,7 +1,10 @@
 $(document).ready(function() {
+
+
 	
 	$(window).resize(function() {
 		scrinWith()
+
 	});
 
 	function scrinWith() {
@@ -83,7 +86,46 @@ $(document).ready(function() {
 	// 	}, 500);
 	// 	return false;
 	// }
+		$('.icon_roll').click(function() {
+            var $icon = $(this);
 
+            console.log('.body_hide1'+' ' +$('.body_hide1').css('display'));
+			console.log('.body_hide2'+' ' +$('.body_hide2').css('display'));
+
+			$('.body_hide1').css('display','none');
+		$('.body_hide2').css('display','none');
+		
+
+            $icon
+                 .closest('.module')
+                 .find('.body_hide')
+                 .toggle('slow');
+
+         });
+
+		$('.icon_roll2').click(function() {
+            var $icon = $(this);
+            console.log($icon);
+            $('.body_hide1').css('display','none');
+		
+		$('.body_hide').css('display','none');
+            $icon
+                 .closest('.module')
+                 .find('.body_hide2')
+                 .toggle('slow');
+         });
+
+		$('.icon_roll1').click(function() {
+            var $icon = $(this);
+            console.log($icon);
+
+		$('.body_hide2').css('display','none');
+		$('.body_hide').css('display','none');
+            $icon
+                 .closest('.module')
+                 .find('.body_hide1')
+                 .toggle('slow');
+         });
 	//Плавный скролл до блока .div по клику на .scroll
 	//Документация: https://github.com/flesler/jquery.scrollTo
 	// $("a.scroll").click(function() {
@@ -172,5 +214,39 @@ responsiveBaseWidth: window,
 	});
 		return false;
 	});
+
+	// $(document).scroll(function(){
+ //        // при скролле страницы делаем проверку
+ //        if ($('.sec_6').is(':visible')) {
+	//     // $element не виден
+	//     $('.body_hide1').css('display','none');
+	//     }
+ //    });
+
+});
+
+$(window).scroll(function(){
+	var wt = $(window).scrollTop();
+	var wh = $(window).height();
+	var et = $('.sec_6').offset().top + 300;
+	var eh = $('.sec_6').outerHeight();
+	var dh = $(document).height();   
+	if (wt + wh >= et || wh + wt == dh || eh + et < wh){
+		console.log('sec_6');
+		$('.body_hide1').css('display','none');
+		$('.body_hide2').css('display','none');
+		$('.body_hide').css('display','none');
+	}
+});
+
+$(window).load(function() {
+	$(".sec_ajax p").animated("fadeInRight", "fadeOut");
+	$(".check_box_left p, .fadeLeft").animated("fadeInLeft", "fadeOut");
+	$(".check_box p, .fadeRight").animated("fadeInRight", "fadeOut");
+	$(".sec_9 h1, .sec_9 p, .fadeup").animated("fadeInUp", "fadeOut");
+	//$(".sec_6").animated("zoomInRight", "fadeOut");
+	$(".fon_baner").animated("flipInY", "fadeOut");
+	$(".end_content").animated("lightSpeedIn", "fadeOut");
+    
 
 });

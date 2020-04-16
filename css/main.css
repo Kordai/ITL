@@ -27,6 +27,7 @@ body {
 	font-family: "RobotoRegular", sans-serif;
 	font-size: 16px;
 	background-color: #ffffff;
+	overflow-x: hidden; 
 }
 header {
 	color: #7d7c7c;
@@ -39,8 +40,7 @@ header {
 .tel_top {
 	font-size: 36px;
     margin-top: 26px;
-    border-style: dashed;
-    color: #1cb3c8;
+     mjucolor: #1cb3c8;
 }
 
 .top_text_header .accent {
@@ -67,7 +67,7 @@ header {
 }
 
 .fon_baner {
-	height: 62%;
+	width: 90vw;
 }
 
 .container {
@@ -215,7 +215,7 @@ a.button13:active {
 .sec_color {	
 	background-color: #ffffff;
 	box-shadow: 0 0 20px rgba(0,0,0,0.5);
-	height: 10110px;
+	height: auto;
 }
 
 .sec_1_left {
@@ -251,6 +251,10 @@ a.button13:active {
 	margin-right: 40px;
     margin-top: 20px;
 
+}
+
+.icon_roll, .icon_roll2, .icon_roll1 {
+	cursor: pointer;
 }
 
 .slider_container p {
@@ -289,7 +293,7 @@ text-transform: uppercase;
 	text-align: right;
 }
 
-.sec_2 i, .sec_5 i, .sec_6 i, .sec_8 i, .sec_9 i {
+.sec_2 i, .sec_5 i, .sec_6 i, .sec_8 i, .sec_9 i, .sec_ajax i, .body_hide i, .body_hide1 i {
 	color: #1cb3c8;
 }
 
@@ -326,19 +330,31 @@ h1 {
 	margin-top: 50px;
 }
 
-
-
-
-.sec_3 {
-	height: 860px;
+.back_col {
 	text-align: center;
+	
+}
+
+.back_col h1{
+background-color: #5d5d5d;
+color: #ffffff;
+width: 505px;
+margin: auto;
 }
 
 
+.sec_3 {
+	height: auto;
+	text-align: center;
+}
+
+.sec_ajax p{
+	font-size: 22px;
+}
 
 .sec_4 {
 	background-color: #eeeeee;
-	height: 1100px;
+	height: auto;
 	text-align: center;
 }
 
@@ -351,15 +367,21 @@ h1 {
 	color: #1cb3c8;
 }
 
+.body_hide, .body_hide1, .body_hide2 {
+	display: none;
+	
+}
 
 .sec_5 {
-	height: 2278px;
+	height: auto;
 	text-align: center;
 	padding-top: 33px;
 	background-color: #eeeeee;
+	display: none;
+	
 }
 
-.sec_5 h2, .sec_6 h2, .sec_8 h2 {
+.sec_5 h2, .sec_6 h2, .sec_8 h2, .sec_ajax h2, .body_hide h2, .body_hide1 h2, .body_hide2 h2 {
 	text-align: center;
 	color: #1cb3c8;
 }
@@ -369,9 +391,11 @@ h1 {
 	text-align: center;
 }
 
-.sec_5 p, .sec_6 p, .sec_8 p, .sec_9 p {
+.sec_5 p, .sec_6 p, .sec_8 p, .sec_9 p, .body_hide p, .body_hide1 p, .body_hide2 p  {
 	text-align: left;
 	padding-left: 30px;
+	font-weight: normal;
+	font-size: 20px;
 }
 
 .input_icon_mail input[type=text] {
@@ -382,6 +406,8 @@ h1 {
 .input_icon_mail {
 	position: relative;
 	text-align: center;
+	display: none;
+	
 }
 
 .input_icon_mail i {
@@ -409,7 +435,7 @@ h1 {
 }
 
 .sec_6 {
-	height: 980px;
+	height: auto;
 	text-align: center;
 	background-color: #ffffff;
 }
@@ -435,13 +461,15 @@ h1 {
 }
 
 .img_l {
-	width: 420px;
+	    height: 739px;
+    width: 443px;
     margin-left: -15px;
 }
 
 .img_r {
-	width: 420px;
-	margin-left: -22px;
+	width: 413px;
+    height: 735px;
+    margin-left: -15px;
 }
 
 .bloc_r {
@@ -449,36 +477,36 @@ h1 {
 }
 
 .cl {
-	height: 330px;
+	height: 410px;
 	text-align: center;
 	background-color: #ffffff;
 	padding: 15px;
 }
 
 .cl1 {
-	height: 270px;
+	height: 330px;
 	padding: 15px;
 	text-align: center;
 	background-color: #eeeeee;
 }
 
 .cl2 {
-	height: 240px;
+	height: 271px;
 	padding: 0;
 	text-align: center;
 	background-color: #eeeeee;
 }
 
 .bloc_r .cl {
-	height: 360px;
+	height: 465px;
 }
 
 .bloc_r .cl1 {
-	height: 240px;
+	height: 270px;
 }
 
 .sec_9 {
-	height: 530px;
+	height: auto;
 	text-align: center;
 }
 
@@ -487,15 +515,14 @@ h1 {
 	text-align: center;
 }
 .sec_footer {
-	height: 530px;
+	height: 400px;
 	text-align: center;
 	background-color: #010101;
 	color: #ffffff;
 }
 
 .logo_svg {
-	height: 150px;
-	margin-top: 50px;
+	height: 100px;
 }
 
 .sec_footer .email {
@@ -533,5 +560,7 @@ h1 {
 }
 
 .down_mnu {
-	margin-top: 50px;
+	margin-top: 30px;
 }
+
+
